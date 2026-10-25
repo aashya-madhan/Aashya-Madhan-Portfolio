@@ -133,12 +133,24 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </p>
               )}
 
-              {/* Screenshot Placeholder */}
-              {project.screenshots && project.screenshots.length > 0 ? (
-                <div className="mb-8 rounded-xl border border-[#2A2A2A] bg-[#111111] p-8 text-center">
-                  <p className="text-[#858585] text-sm">Screenshot coming soon</p>
+              {/* Screenshots */}
+              {project.screenshots && project.screenshots.length > 0 && (
+                <div className="mb-8 space-y-4">
+                  {project.screenshots.map((screenshot, index) => (
+                    <div
+                      key={index}
+                      className="rounded-xl border border-[#2A2A2A] bg-[#111111] overflow-hidden"
+                    >
+                      <img
+                        src={screenshot}
+                        alt={`${project.title} screenshot ${index + 1}`}
+                        className="w-full h-auto"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
                 </div>
-              ) : null}
+              )}
 
               {/* Problem Statement */}
               {project.modalContent?.problemStatement &&

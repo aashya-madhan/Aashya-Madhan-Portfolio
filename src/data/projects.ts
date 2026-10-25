@@ -34,8 +34,10 @@ export const projects: Project[] = [
       },
     ],
     screenshots: [
-      "/projects/safepulse-1.jpg", // TODO: replace with actual screenshot
-      "/projects/safepulse-2.jpg", // TODO: replace with actual screenshot
+      "/projects/safepulse-1.jpg", 
+      "/projects/safepulse-2.jpg",
+      "/projects/safepulse-3.jpg", 
+
     ],
     modalContent: {
       introduction: "A full-stack personal safety application designed to provide peace of mind through emergency preparedness and rapid response capabilities.",
@@ -86,8 +88,9 @@ export const projects: Project[] = [
       },
     ],
     screenshots: [
-      "/projects/prepforge-1.jpg", // TODO: replace with actual screenshot
-      "/projects/prepforge-2.jpg", // TODO: replace with actual screenshot
+      "/projects/prepforge-1.jpg", 
+      "/projects/prepforge-2.jpg", 
+      "/projects/prepforge-3.jpg",
     ],
     modalContent: {
       introduction: "An AI-powered platform designed to help students and job seekers prepare effectively for technical interviews and placement processes.",
@@ -107,7 +110,7 @@ export const projects: Project[] = [
   },
   {
     id: "verifaura",
-    title: "VerifAura AI",
+    title: "VerifAura",
     description:
       "An AI-based document forgery detection system using computer vision and deep learning to analyze documents and identify potential manipulations. Built with Flask and integrated with a trained CNN model for automated forgery detection and prediction.",
     techStack: ["Python", "Flask", "OpenCV", "PyMuPDF", "CNN", "Deep Learning"],
@@ -138,8 +141,9 @@ export const projects: Project[] = [
       },
     ],
     screenshots: [
-      "/projects/verifaura-1.jpg", // TODO: replace with actual screenshot
-      "/projects/verifaura-2.jpg", // TODO: replace with actual screenshot
+      "/projects/verifaura-1.jpg", 
+      "/projects/verifaura-2.jpg", 
+      "/projects/verifaura-3.jpg",
     ],
     modalContent: {
       introduction: "An AI-based document forgery detection system that leverages computer vision and deep learning to identify potential document manipulations.",

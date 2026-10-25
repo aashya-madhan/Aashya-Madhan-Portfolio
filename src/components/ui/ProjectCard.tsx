@@ -56,6 +56,17 @@ export function ProjectCard({ project, onClick, isSelected, className }: Project
         </div>
       </div>
 
+      {/* Project Cover Image */}
+      {!isDisabled && project.image && (
+        <div className="mb-4 rounded-lg overflow-hidden border border-[#2A2A2A] bg-[#111111]">
+          <img
+            src={project.image}
+            alt={`${project.title} preview`}
+            className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+      )}
+
       {/* Truncated description */}
       <p
         className={cn(
