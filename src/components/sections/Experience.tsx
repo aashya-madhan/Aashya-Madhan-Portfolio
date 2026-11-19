@@ -11,7 +11,7 @@ export function Experience() {
   return (
     <AnimatedSection id="experience" className="scroll-mt-20">
       <div className="mx-auto max-w-4xl">
-        <SectionHeading title="Experience" subtitle="My professional journey" />
+        <SectionHeading title="Experience" subtitle="Where I've built and learned" />
         <motion.div
           variants={staggerContainer}
           initial="hidden"

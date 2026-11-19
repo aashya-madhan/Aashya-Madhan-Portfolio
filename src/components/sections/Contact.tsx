@@ -11,7 +11,7 @@ export function Contact() {
       <div className="mx-auto max-w-5xl">
         <SectionHeading
           title="Get in Touch"
-          subtitle="Let's create something amazing together"
+          subtitle="Let's build something that matters"
         />
         
         <div className="grid md:grid-cols-3 gap-6">
