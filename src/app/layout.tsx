@@ -5,6 +5,7 @@ import { StarField } from "~/components/effects/StarField";
 import { Navbar } from "~/components/ui/Navbar";
 import { Footer } from "~/components/ui/Footer";
 import "./globals.css";
+import "./luxury-3d.css";
 
 const inter = Inter({
   variable: "--font-inter",
