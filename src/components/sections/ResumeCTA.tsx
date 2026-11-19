@@ -16,11 +16,11 @@ export function ResumeCTA() {
 
         <div className="relative z-10">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#F5F1E8]">
-            Want to know more<span className="text-[#C5A568]">?</span>
+            The full story<span className="text-[#C5A568]">.</span>
           </h2>
           <p className="mt-4 text-[#B8B5AE] text-lg">
-            Download my resume for a detailed look at my experience, skills,
-            and education.
+            My resume covers my education, certifications, internships and
+            research in detail.
           </p>
           <div className="mt-8">
             <a

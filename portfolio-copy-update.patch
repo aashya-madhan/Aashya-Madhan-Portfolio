@@ -1,0 +1,350 @@
+diff --git a/src/components/sections/About.tsx b/src/components/sections/About.tsx
+index d067671..2a9d106 100644
+--- a/src/components/sections/About.tsx
++++ b/src/components/sections/About.tsx
+@@ -6,23 +6,25 @@ import { AnimatedSection } from "~/components/ui/AnimatedSection";
+ import { SectionHeading } from "~/components/ui/SectionHeading";
+ 
+ const stats = [
+-  { value: "9.41", label: "CGPA / 10" },
+-  { value: "3+", label: "Projects Built" },
+-  { value: "2+", label: "Internships" },
+-  { value: "IEEE", label: "Publication" },
++  { value: "30%", label: "Less manual data entry" },
++  { value: "15%", label: "Faster page loads" },
++  { value: "5+", label: "Responsive interfaces built" },
++  { value: "91%", label: "Prediction accuracy (IEEE)" },
+ ];
+ 
+ export function About() {
+   return (
+     <AnimatedSection id="about" className="scroll-mt-20">
+       <div className="mx-auto max-w-4xl">
+-        <SectionHeading title="About Me" subtitle="Get to know me better" />
++        <SectionHeading title="About Me" subtitle="Curious by nature. Careful in craft." />
+         <div className="space-y-8">
+           {/* Bio */}
+           <div className="max-w-3xl mx-auto">
+-            <p className="text-[#B8B5AE] leading-relaxed text-lg text-left">
+-              {personalInfo.bio}
+-            </p>
++            {personalInfo.bio.split("\n\n").map((paragraph, i) => (
++              <p key={i} className="text-[#B8B5AE] leading-relaxed text-lg text-left [&:not(:first-child)]:mt-5">
++                {paragraph}
++              </p>
++            ))}
+           </div>
+ 
+           {/* Stats Grid */}
+diff --git a/src/components/sections/Contact.tsx b/src/components/sections/Contact.tsx
+index 9ad1547..811543c 100644
+--- a/src/components/sections/Contact.tsx
++++ b/src/components/sections/Contact.tsx
+@@ -11,7 +11,7 @@ export function Contact() {
+       <div className="mx-auto max-w-5xl">
+         <SectionHeading
+           title="Get in Touch"
+-          subtitle="Let's create something amazing together"
++          subtitle="Let's build something that matters"
+         />
+         
+         <div className="grid md:grid-cols-3 gap-6">
+diff --git a/src/components/sections/Experience.tsx b/src/components/sections/Experience.tsx
+index 21f70dc..c3f44d8 100644
+--- a/src/components/sections/Experience.tsx
++++ b/src/components/sections/Experience.tsx
+@@ -11,7 +11,7 @@ export function Experience() {
+   return (
+     <AnimatedSection id="experience" className="scroll-mt-20">
+       <div className="mx-auto max-w-4xl">
+-        <SectionHeading title="Experience" subtitle="My professional journey" />
++        <SectionHeading title="Experience" subtitle="Where I've built and learned" />
+         <motion.div
+           variants={staggerContainer}
+           initial="hidden"
+diff --git a/src/components/sections/Hero.tsx b/src/components/sections/Hero.tsx
+index 1a41297..954e3fc 100644
+--- a/src/components/sections/Hero.tsx
++++ b/src/components/sections/Hero.tsx
+@@ -8,9 +8,9 @@ import { HeroScene } from "~/components/effects/HeroScene";
+ 
+ const metrics = [
+   { value: "9.41", label: "CGPA / 10" },
+-  { value: "3+", label: "Projects" },
+-  { value: "2+", label: "Internships" },
+-  { value: "IEEE", label: "Publication" },
++  { value: "3", label: "Projects" },
++  { value: "2", label: "Internships" },
++  { value: "1", label: "IEEE Paper" },
+ ];
+ 
+ export function Hero() {
+@@ -27,7 +27,7 @@ export function Hero() {
+               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#c5a568] opacity-50" />
+               <span className="relative inline-flex h-2 w-2 rounded-full bg-[#c5a568]" />
+             </span>
+-            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#d5c29b] sm:text-xs">Open to opportunities</span>
++            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#d5c29b] sm:text-xs">Open to Full-Stack &amp; ML roles</span>
+           </motion.div>
+ 
+           <motion.p variants={fadeInUp} className="mb-4 font-mono text-[11px] uppercase tracking-[0.3em] text-[#9d8b68]">
+@@ -39,21 +39,21 @@ export function Hero() {
+           </motion.h1>
+ 
+           <motion.div variants={fadeInUp} className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[#aaa49a]">
+-            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#c5a568]">Computer Science</span>
++            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#c5a568]">Full-Stack · ML Research</span>
+             <span className="hidden h-px w-8 bg-[#66563b] sm:block" />
+-            <span>B.Tech · SRM Institute of Science and Technology, Ramapuram</span>
++            <span>B.Tech CSE · SRM Institute of Science and Technology · 2027</span>
+           </motion.div>
+ 
+           <motion.p variants={fadeInUp} className="mt-7 max-w-xl text-base leading-8 text-[#aaa69d] md:text-lg">
+-            {personalInfo.tagline}. Focused on full-stack development with <span className="text-[#eee5d2]">React.js</span>, <span className="text-[#eee5d2]">Node.js</span> and <span className="text-[#eee5d2]">MongoDB</span>, alongside research in machine learning.
++            {personalInfo.tagline}. My stack is <span className="text-[#eee5d2]">React.js</span>, <span className="text-[#eee5d2]">Node.js</span> and <span className="text-[#eee5d2]">MongoDB</span>, backed by two developer internships.
+           </motion.p>
+           <motion.p variants={fadeInUp} className="mt-3 max-w-xl text-sm leading-7 text-[#827d73]">
+-            Co-authored an IEEE conference paper on a hybrid deep learning framework reporting 91% prediction accuracy.
++            Co-author of a published IEEE paper on hybrid deep learning, with 91% prediction accuracy.
+           </motion.p>
+ 
+           <motion.div variants={fadeInUp} className="mt-9 flex flex-wrap items-center gap-3">
+             <a href="#projects" className="lux-primary-link">
+-              Explore selected work <ArrowUpRight size={16} />
++              View my work <ArrowUpRight size={16} />
+             </a>
+             <a href="#contact" className="lux-secondary-link">Get in touch</a>
+             <a href={personalInfo.resumeUrl} target="_blank" rel="noopener noreferrer" className="lux-icon-link" aria-label="Open resume">
+diff --git a/src/components/sections/Projects.tsx b/src/components/sections/Projects.tsx
+index c17a36f..d7f8563 100644
+--- a/src/components/sections/Projects.tsx
++++ b/src/components/sections/Projects.tsx
+@@ -21,7 +21,7 @@ export function Projects() {
+             <p className="section-kicker">02 — Selected work</p>
+             <h2 className="lux-section-title">Projects<span>.</span></h2>
+           </div>
+-          <p className="max-w-sm text-sm leading-7 text-[#8e887d]">A selection of projects across personal safety, placement preparation and document integrity.</p>
++          <p className="max-w-sm text-sm leading-7 text-[#8e887d]">Three projects, three real problems: personal safety, career readiness and document trust.</p>
+         </div>
+ 
+         <motion.div
+diff --git a/src/components/sections/ResumeCTA.tsx b/src/components/sections/ResumeCTA.tsx
+index a92b0a8..0f5ed9c 100644
+--- a/src/components/sections/ResumeCTA.tsx
++++ b/src/components/sections/ResumeCTA.tsx
+@@ -16,11 +16,11 @@ export function ResumeCTA() {
+ 
+         <div className="relative z-10">
+           <h2 className="text-3xl sm:text-4xl font-bold text-[#F5F1E8]">
+-            Want to know more<span className="text-[#C5A568]">?</span>
++            The full story<span className="text-[#C5A568]">.</span>
+           </h2>
+           <p className="mt-4 text-[#B8B5AE] text-lg">
+-            Download my resume for a detailed look at my experience, skills,
+-            and education.
++            My resume covers my education, certifications, internships and
++            research in detail.
+           </p>
+           <div className="mt-8">
+             <a
+diff --git a/src/components/sections/TechStack.tsx b/src/components/sections/TechStack.tsx
+index 551e2a0..a990eea 100644
+--- a/src/components/sections/TechStack.tsx
++++ b/src/components/sections/TechStack.tsx
+@@ -13,7 +13,7 @@ export function TechStack() {
+       <div className="mx-auto max-w-4xl">
+         <SectionHeading
+           title="Skills & Expertise"
+-          subtitle="Technologies I work with to build amazing projects"
++          subtitle="The tools I use to take a product from database to deployment."
+         />
+         <div className="space-y-10">
+           {skillCategories.map((category) => (
+diff --git a/src/data/experience.ts b/src/data/experience.ts
+index d859f45..ddfaaf0 100644
+--- a/src/data/experience.ts
++++ b/src/data/experience.ts
+@@ -9,9 +9,9 @@ export const experience: Experience[] = [
+     location: "Published",
+     website: "https://ieeexplore.ieee.org/",
+     highlights: [
+-      "Co-authored an IEEE conference paper on 'A Hybrid TCN–TabTransformer Framework for Multi-Dataset Campus Placement Prediction'",
+-      "Proposed a hybrid deep learning framework combining TCN, TabTransformer, and BiLSTM architectures",
+-      "Achieved 91% prediction accuracy on multi-dataset campus placement prediction tasks",
++      "Co-authored 'A Hybrid TCN–TabTransformer Framework for Multi-Dataset Campus Placement Prediction', published at IEEE ICC-CNS",
++      "Designed a hybrid architecture combining TCN, TabTransformer and BiLSTM to model placement outcomes across multiple datasets",
++      "Reached 91% prediction accuracy",
+     ],
+     techUsed: ["Deep Learning", "TCN", "TabTransformer", "BiLSTM", "Python", "Machine Learning"],
+   },
+@@ -23,8 +23,8 @@ export const experience: Experience[] = [
+     location: "Remote",
+     website: "https://infyspringboard.onwingspan.com/web/en/page/home",
+     highlights: [
+-      "Developed component-based React.js interfaces and integrated REST APIs end-to-end, reducing manual data-entry time by 30%",
+-      "Worked across 2 Agile sprints using Git/GitHub, code reviews, and CI/CD workflows for version-controlled development",
++      "Cut manual data-entry time by 30% by building component-based React.js interfaces integrated end to end with REST APIs",
++      "Delivered across 2 Agile sprints using Git/GitHub, code reviews and CI/CD workflows",
+     ],
+     techUsed: ["React.js", "Node.js", "REST APIs", "Git", "GitHub", "CI/CD", "Agile/Scrum"],
+   },
+@@ -36,8 +36,8 @@ export const experience: Experience[] = [
+     location: "Remote",
+     website: "https://www.ibm.com/academic/home",
+     highlights: [
+-      "Developed 5+ responsive web interfaces and optimized rendering performance, reducing page load time by 15%",
+-      "Integrated 3 third-party REST APIs to support real-time data in production-facing features",
++      "Reduced page load time by 15% while building 5+ responsive web interfaces",
++      "Integrated 3 third-party REST APIs to deliver real-time data in production-facing features",
+     ],
+     techUsed: ["HTML", "CSS", "JavaScript", "React.js", "REST APIs"],
+   },
+diff --git a/src/data/personal.ts b/src/data/personal.ts
+index 55493e0..4b4e072 100644
+--- a/src/data/personal.ts
++++ b/src/data/personal.ts
+@@ -3,9 +3,10 @@ import { PersonalInfo } from "~/types/data";
+ 
+ export const personalInfo: PersonalInfo = {
+   name: "Aashya Madhan",
+-  title: "Computer Science Engineering Student",
+-  tagline: "Building exceptional digital experiences with modern web technologies",
+-  bio: "I'm a Computer Science Engineering student with a 9.41/10 CGPA and hands-on experience in full-stack web development. I specialize in React.js, Node.js/Express, and MongoDB ecosystems, delivering clean code and exceptional user experiences. I co-authored an IEEE conference paper on a hybrid deep learning framework achieving 91% prediction accuracy.",
++  title: "Full-Stack Developer · ML Researcher",
++  tagline: "I build full-stack web apps, and the machine learning behind smarter ones",
++  bio:
++    "I build software that holds up when real people use it. As a Computer Science student at SRM Institute of Science and Technology (9.41 CGPA), I take projects from database to deployment using React, Node.js, Express and MongoDB. Internships at Infosys Springboard and IBM SkillsBuild taught me to work the way real engineering teams do: Agile sprints, code reviews and CI/CD.\n\nI'm equally drawn to machine learning. My research on campus placement prediction, a hybrid TCN–TabTransformer model that reached 91% accuracy, was published at IEEE ICC-CNS. That research habit shapes how I build: I test assumptions, measure results and iterate.",
+   email: "aashya05@gmail.com",
+   location: "Chennai, Tamil Nadu, India",
+   profileImage: "",
+diff --git a/src/data/projects.ts b/src/data/projects.ts
+index f83ba5f..9e69c73 100644
+--- a/src/data/projects.ts
++++ b/src/data/projects.ts
+@@ -5,7 +5,7 @@ export const projects: Project[] = [
+     id: "safepulse",
+     title: "SafePulse",
+     description:
+-      "A full-stack personal safety application with secure user authentication, real-time location sharing, and emergency contact management. Features an emergency alert workflow using geolocation, server-side countdown logic, and email notifications to notify trusted contacts during emergencies.",
++      "Help, one tap away. A personal safety app with live location sharing and trusted-contact management. In an emergency, a server-side countdown triggers email alerts that tell your contacts where you are.",
+     techStack: ["React.js", "Node.js", "Express", "MongoDB", "JWT", "bcrypt", "Geolocation API", "Resend API"],
+     githubUrl: "https://github.com/aashya-madhan/SafePulse",
+     liveUrl: "https://safe-pulse-chi.vercel.app",
+@@ -40,9 +40,9 @@ export const projects: Project[] = [
+ 
+     ],
+     modalContent: {
+-      introduction: "A full-stack personal safety application designed to provide peace of mind through emergency preparedness and rapid response capabilities.",
+-      problemStatement: "In emergency situations, every second counts. Traditional methods of contacting help can be slow and unreliable, especially when someone is in distress.",
+-      contribution: "Built the complete full-stack architecture including secure JWT-based authentication, real-time geolocation tracking, server-side emergency countdown logic, and automated email notification system using the Resend API.",
++      introduction: "A full-stack safety app built for the moments when reaching for a phone isn't an option, giving users and their loved ones peace of mind.",
++      problemStatement: "In an emergency, every second counts, and calling or typing out a message is often the slowest part. People in distress need a way to raise the alarm quickly.",
++      contribution: "Designed and built the full stack: JWT authentication with bcrypt hashing, geolocation tracking, a server-side emergency countdown, and automated email alerts through the Resend API.",
+       features: [
+         "JWT-based authentication with bcrypt password hashing for secure user accounts",
+         "Real-time location sharing with trusted contacts using Geolocation API",
+@@ -59,7 +59,7 @@ export const projects: Project[] = [
+     id: "prepforge",
+     title: "PrepForge",
+     description:
+-      "AI-Powered Placement Preparation Platform that organizes interview questions across multiple technical and non-technical domains. Features a resume analysis and job-description matching system that evaluates candidate profiles against relevant skills and keywords to provide personalized feedback.",
++      "Placement prep that adapts to you. Interview questions across technical and non-technical domains, plus a resume analyzer that matches your profile to a job description and shows which skills and keywords you're missing.",
+     techStack: ["React.js", "Node.js", "REST APIs", "MongoDB", "AI/ML"],
+     githubUrl: "https://github.com/aashya-madhan/PrepForge",
+     liveUrl: "https://prep-forge-sand.vercel.app",
+@@ -93,9 +93,9 @@ export const projects: Project[] = [
+       "/projects/prepforge-3.jpg",
+     ],
+     modalContent: {
+-      introduction: "An AI-powered platform designed to help students and job seekers prepare effectively for technical interviews and placement processes.",
+-      problemStatement: "Job seekers often struggle to organize their interview preparation effectively and lack personalized feedback on their readiness for specific roles.",
+-      contribution: "Developed the full-stack application with React.js frontend, Node.js backend, and integrated AI/ML capabilities for resume analysis and skill matching against job descriptions.",
++      introduction: "An AI-powered platform that helps students and job seekers prepare for technical interviews and placements in one place.",
++      problemStatement: "Interview prep is scattered across dozens of sources, and candidates rarely know how their resume measures up against a specific role.",
++      contribution: "Built the full-stack application: a React.js frontend, a Node.js REST API with MongoDB, and the resume analysis and job-description matching system.",
+       features: [
+         "AI-powered resume analysis with keyword extraction and skill matching",
+         "Job description matching system that evaluates candidate profiles",
+@@ -112,7 +112,7 @@ export const projects: Project[] = [
+     id: "verifaura",
+     title: "VerifAura",
+     description:
+-      "An AI-based document forgery detection system using computer vision and deep learning to analyze documents and identify potential manipulations. Built with Flask and integrated with a trained CNN model for automated forgery detection and prediction.",
++      "Catching what the eye misses. A document forgery detection system that uses computer vision and a trained CNN to analyze uploads and flag likely manipulations.",
+     techStack: ["Python", "Flask", "OpenCV", "PyMuPDF", "CNN", "Deep Learning"],
+     githubUrl: "https://github.com/aashya-madhan/VerifAura",
+     liveUrl: "https://verifaura-ai.onrender.com",
+@@ -137,7 +137,7 @@ export const projects: Project[] = [
+       {
+         icon: "Zap",
+         label: "Automated Detection",
+-        detail: "Real-time forgery detection system",
++        detail: "Upload a document, get a prediction",
+       },
+     ],
+     screenshots: [
+@@ -146,14 +146,14 @@ export const projects: Project[] = [
+       "/projects/verifaura-3.jpg",
+     ],
+     modalContent: {
+-      introduction: "An AI-based document forgery detection system that leverages computer vision and deep learning to identify potential document manipulations.",
+-      problemStatement: "Document forgery poses significant security risks in various sectors. Manual verification is time-consuming and prone to human error.",
+-      contribution: "Built the complete Flask-based web application, integrated OpenCV for document preprocessing, trained and deployed a CNN model for forgery detection, and implemented multi-format document support using PyMuPDF.",
++      introduction: "An AI-based system that uses computer vision and deep learning to detect manipulated documents automatically.",
++      problemStatement: "Forged documents are a serious security risk, and checking them by hand is slow and prone to human error.",
++      contribution: "Built the Flask web application end to end: OpenCV for document preprocessing, a trained CNN model for forgery prediction, and PyMuPDF for multi-format document support.",
+       features: [
+         "Computer vision-based document analysis using OpenCV",
+         "Trained CNN model for deep learning-based forgery prediction",
+         "Multi-format document support (PDF, images) via PyMuPDF",
+-        "Real-time automated detection system",
++        "Automated detection from a single upload",
+         "Flask web application for easy document upload and analysis",
+         "Confidence scoring for forgery predictions",
+       ],
+diff --git a/src/data/site-config.ts b/src/data/site-config.ts
+index 6a35b54..c120e62 100644
+--- a/src/data/site-config.ts
++++ b/src/data/site-config.ts
+@@ -3,7 +3,7 @@ import { SiteConfig } from "~/types/data";
+ export const siteConfig: SiteConfig = {
+   title: "AASHYA MADHAN Portfolio",
+   description:
+-    "Full Stack Developer specializing in React, Next.js, and Node.js. Building exceptional digital experiences with modern web technologies.",
++    "Full-stack developer and ML researcher building with React, Node.js and MongoDB. IEEE-published. Based in Chennai.",
+   url: "https://www.aashyamadhan.com",
+   ogImage: "/og-image.png",
+   author: "Aashya Madhan",
+diff --git a/src/data/skills.ts b/src/data/skills.ts
+index 30a2434..dcc8570 100644
+--- a/src/data/skills.ts
++++ b/src/data/skills.ts
+@@ -22,6 +22,9 @@ export const skillCategories: SkillCategory[] = [
+       { name: "Node.js", icon: `${DI}/nodejs/nodejs-original.svg` },
+       { name: "Express.js", icon: `${DI}/express/express-original.svg` },
+       { name: "Flask", icon: `${DI}/flask/flask-original.svg` },
++      { name: "REST APIs", icon: `${SI}/swagger/85EA2D` },
++      // JWT icon was black (#000000) and invisible on the dark background
++      { name: "JWT", icon: `${SI}/jsonwebtokens/D63AFF` },
+     ],
+   },
+   {
+@@ -32,16 +35,14 @@ export const skillCategories: SkillCategory[] = [
+       { name: "Git", icon: `${DI}/git/git-original.svg` },
+       { name: "GitHub", icon: `${DI}/github/github-original.svg` },
+       { name: "Postman", icon: `${SI}/postman/FF6C37` },
++      { name: "CI/CD", icon: `${DI}/githubactions/githubactions-original.svg` },
+     ],
+   },
+   {
+-    category: "Other Technologies",
++    category: "AI & Computer Vision",
+     skills: [
+       { name: "OpenCV", icon: `${DI}/opencv/opencv-original.svg` },
+       { name: "PyMuPDF", icon: `${DI}/python/python-original.svg` },
+-      { name: "REST APIs", icon: `${SI}/fastapi/009688` },
+-      { name: "JWT", icon: `${SI}/jsonwebtokens/000000` },
+-      { name: "CI/CD", icon: `${DI}/githubactions/githubactions-original.svg` },
+     ],
+   },
+ ];

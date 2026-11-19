@@ -22,6 +22,9 @@ export const skillCategories: SkillCategory[] = [
       { name: "Node.js", icon: `${DI}/nodejs/nodejs-original.svg` },
       { name: "Express.js", icon: `${DI}/express/express-original.svg` },
       { name: "Flask", icon: `${DI}/flask/flask-original.svg` },
+      { name: "REST APIs", icon: `${SI}/swagger/85EA2D` },
+      // JWT icon was black (#000000) and invisible on the dark background
+      { name: "JWT", icon: `${SI}/jsonwebtokens/D63AFF` },
     ],
   },
   {
@@ -32,16 +35,14 @@ export const skillCategories: SkillCategory[] = [
       { name: "Git", icon: `${DI}/git/git-original.svg` },
       { name: "GitHub", icon: `${DI}/github/github-original.svg` },
       { name: "Postman", icon: `${SI}/postman/FF6C37` },
+      { name: "CI/CD", icon: `${DI}/githubactions/githubactions-original.svg` },
     ],
   },
   {
-    category: "Other Technologies",
+    category: "AI & Computer Vision",
     skills: [
       { name: "OpenCV", icon: `${DI}/opencv/opencv-original.svg` },
       { name: "PyMuPDF", icon: `${DI}/python/python-original.svg` },
-      { name: "REST APIs", icon: `${SI}/fastapi/009688` },
-      { name: "JWT", icon: `${SI}/jsonwebtokens/000000` },
-      { name: "CI/CD", icon: `${DI}/githubactions/githubactions-original.svg` },
     ],
   },
 ];

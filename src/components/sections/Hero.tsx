@@ -8,9 +8,9 @@ import { HeroScene } from "~/components/effects/HeroScene";
 
 const metrics = [
   { value: "9.41", label: "CGPA / 10" },
-  { value: "3+", label: "Projects" },
-  { value: "2+", label: "Internships" },
-  { value: "IEEE", label: "Publication" },
+  { value: "3", label: "Projects" },
+  { value: "2", label: "Internships" },
+  { value: "1", label: "IEEE Paper" },
 ];
 
 export function Hero() {
@@ -27,11 +27,11 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#c5a568] opacity-50" />
               <span className="relative inline-flex h-2 w-2 rounded-full bg-[#c5a568]" />
             </span>
-            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#d5c29b] sm:text-xs">Open to opportunities</span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#d5c29b] sm:text-xs">Open to  SDE &amp; Full-Stack roles</span>
           </motion.div>
 
           <motion.p variants={fadeInUp} className="mb-4 font-mono text-[11px] uppercase tracking-[0.3em] text-[#9d8b68]">
-            Portfolio · 2026
+            
           </motion.p>
           <motion.h1 variants={fadeInUp} className="max-w-3xl text-[clamp(3.6rem,8vw,7.7rem)] font-medium leading-[0.91] tracking-[-0.075em] text-[#f5f0e5]">
             Aashya
@@ -39,21 +39,21 @@ export function Hero() {
           </motion.h1>
 
           <motion.div variants={fadeInUp} className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-[#aaa49a]">
-            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#c5a568]">Computer Science</span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#c5a568]">SDE · Full-Stack </span>
             <span className="hidden h-px w-8 bg-[#66563b] sm:block" />
-            <span>B.Tech · SRM Institute of Science and Technology, Ramapuram</span>
+            <span>B.Tech CSE · SRM Institute of Science and Technology · 2027</span>
           </motion.div>
 
           <motion.p variants={fadeInUp} className="mt-7 max-w-xl text-base leading-8 text-[#aaa69d] md:text-lg">
-            {personalInfo.tagline}. Focused on full-stack development with <span className="text-[#eee5d2]">React.js</span>, <span className="text-[#eee5d2]">Node.js</span> and <span className="text-[#eee5d2]">MongoDB</span>, alongside research in machine learning.
+            {personalInfo.tagline}. My stack is <span className="text-[#eee5d2]">Python</span>,<span className="text-[#eee5d2]">React.js</span>,<span className="text-[#eee5d2]">Node.js</span> and <span className="text-[#eee5d2]">SQL</span>, backed by two developer internships.
           </motion.p>
           <motion.p variants={fadeInUp} className="mt-3 max-w-xl text-sm leading-7 text-[#827d73]">
-            Co-authored an IEEE conference paper on a hybrid deep learning framework reporting 91% prediction accuracy.
+            Co-author of a published IEEE paper on hybrid deep learning, with 91% prediction accuracy.
           </motion.p>
 
           <motion.div variants={fadeInUp} className="mt-9 flex flex-wrap items-center gap-3">
             <a href="#projects" className="lux-primary-link">
-              Explore selected work <ArrowUpRight size={16} />
+              View my work <ArrowUpRight size={16} />
             </a>
             <a href="#contact" className="lux-secondary-link">Get in touch</a>
             <a href={personalInfo.resumeUrl} target="_blank" rel="noopener noreferrer" className="lux-icon-link" aria-label="Open resume">
@@ -102,7 +102,7 @@ export function Hero() {
       <a href="#about" aria-label="Scroll to about section" className="hero-scroll-cue">
         <span>Scroll to explore</span><ArrowDown size={14} />
       </a>
-      <div className="hero-side-index" aria-hidden="true">AM — 001</div>
+      <div className="hero-side-index" aria-hidden="true"></div>
     </section>
   );
 }

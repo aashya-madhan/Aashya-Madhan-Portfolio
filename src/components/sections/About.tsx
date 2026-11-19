@@ -6,23 +6,25 @@ import { AnimatedSection } from "~/components/ui/AnimatedSection";
 import { SectionHeading } from "~/components/ui/SectionHeading";
 
 const stats = [
-  { value: "9.41", label: "CGPA / 10" },
-  { value: "3+", label: "Projects Built" },
-  { value: "2+", label: "Internships" },
-  { value: "IEEE", label: "Publication" },
+  { value: "30%", label: "Less manual data entry" },
+  { value: "15%", label: "Faster page loads" },
+  { value: "5+", label: "Responsive interfaces built" },
+  { value: "91%", label: "Prediction accuracy (IEEE)" },
 ];
 
 export function About() {
   return (
     <AnimatedSection id="about" className="scroll-mt-20">
       <div className="mx-auto max-w-4xl">
-        <SectionHeading title="About Me" subtitle="Get to know me better" />
+        <SectionHeading title="About Me" subtitle="Curious by nature. Careful in craft." />
         <div className="space-y-8">
           {/* Bio */}
           <div className="max-w-3xl mx-auto">
-            <p className="text-[#B8B5AE] leading-relaxed text-lg text-left">
-              {personalInfo.bio}
-            </p>
+            {personalInfo.bio.split("\n\n").map((paragraph, i) => (
+              <p key={i} className="text-[#B8B5AE] leading-relaxed text-lg text-left [&:not(:first-child)]:mt-5">
+                {paragraph}
+              </p>
+            ))}
           </div>
 
           {/* Stats Grid */}

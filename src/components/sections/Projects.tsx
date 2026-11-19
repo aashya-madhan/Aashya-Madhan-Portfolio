@@ -21,7 +21,7 @@ export function Projects() {
             <p className="section-kicker">02 — Selected work</p>
             <h2 className="lux-section-title">Projects<span>.</span></h2>
           </div>
-          <p className="max-w-sm text-sm leading-7 text-[#8e887d]">A selection of projects across personal safety, placement preparation and document integrity.</p>
+          <p className="max-w-sm text-sm leading-7 text-[#8e887d]">Three projects, three real problems: personal safety, career readiness and document trust.</p>
         </div>
 
         <motion.div

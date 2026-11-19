@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: "safepulse",
     title: "SafePulse",
     description:
-      "A full-stack personal safety application with secure user authentication, real-time location sharing, and emergency contact management. Features an emergency alert workflow using geolocation, server-side countdown logic, and email notifications to notify trusted contacts during emergencies.",
+      "Help, one tap away. A personal safety app with live location sharing and trusted-contact management. In an emergency, a server-side countdown triggers email alerts that tell your contacts where you are.",
     techStack: ["React.js", "Node.js", "Express", "MongoDB", "JWT", "bcrypt", "Geolocation API", "Resend API"],
     githubUrl: "https://github.com/aashya-madhan/SafePulse",
     liveUrl: "https://safe-pulse-chi.vercel.app",
@@ -40,9 +40,9 @@ export const projects: Project[] = [
 
     ],
     modalContent: {
-      introduction: "A full-stack personal safety application designed to provide peace of mind through emergency preparedness and rapid response capabilities.",
-      problemStatement: "In emergency situations, every second counts. Traditional methods of contacting help can be slow and unreliable, especially when someone is in distress.",
-      contribution: "Built the complete full-stack architecture including secure JWT-based authentication, real-time geolocation tracking, server-side emergency countdown logic, and automated email notification system using the Resend API.",
+      introduction: "A full-stack safety app built for the moments when reaching for a phone isn't an option, giving users and their loved ones peace of mind.",
+      problemStatement: "In an emergency, every second counts, and calling or typing out a message is often the slowest part. People in distress need a way to raise the alarm quickly.",
+      contribution: "Designed and built the full stack: JWT authentication with bcrypt hashing, geolocation tracking, a server-side emergency countdown, and automated email alerts through the Resend API.",
       features: [
         "JWT-based authentication with bcrypt password hashing for secure user accounts",
         "Real-time location sharing with trusted contacts using Geolocation API",
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     id: "prepforge",
     title: "PrepForge",
     description:
-      "AI-Powered Placement Preparation Platform that organizes interview questions across multiple technical and non-technical domains. Features a resume analysis and job-description matching system that evaluates candidate profiles against relevant skills and keywords to provide personalized feedback.",
+      "Placement prep that adapts to you. Interview questions across technical and non-technical domains, plus a resume analyzer that matches your profile to a job description and shows which skills and keywords you're missing.",
     techStack: ["React.js", "Node.js", "REST APIs", "MongoDB", "AI/ML"],
     githubUrl: "https://github.com/aashya-madhan/PrepForge",
     liveUrl: "https://prep-forge-sand.vercel.app",
@@ -93,9 +93,9 @@ export const projects: Project[] = [
       "/projects/prepforge-3.jpg",
     ],
     modalContent: {
-      introduction: "An AI-powered platform designed to help students and job seekers prepare effectively for technical interviews and placement processes.",
-      problemStatement: "Job seekers often struggle to organize their interview preparation effectively and lack personalized feedback on their readiness for specific roles.",
-      contribution: "Developed the full-stack application with React.js frontend, Node.js backend, and integrated AI/ML capabilities for resume analysis and skill matching against job descriptions.",
+      introduction: "An AI-powered platform that helps students and job seekers prepare for technical interviews and placements in one place.",
+      problemStatement: "Interview prep is scattered across dozens of sources, and candidates rarely know how their resume measures up against a specific role.",
+      contribution: "Built the full-stack application: a React.js frontend, a Node.js REST API with MongoDB, and the resume analysis and job-description matching system.",
       features: [
         "AI-powered resume analysis with keyword extraction and skill matching",
         "Job description matching system that evaluates candidate profiles",
@@ -112,7 +112,7 @@ export const projects: Project[] = [
     id: "verifaura",
     title: "VerifAura",
     description:
-      "An AI-based document forgery detection system using computer vision and deep learning to analyze documents and identify potential manipulations. Built with Flask and integrated with a trained CNN model for automated forgery detection and prediction.",
+      "Catching what the eye misses. A document forgery detection system that uses computer vision and a trained CNN to analyze uploads and flag likely manipulations.",
     techStack: ["Python", "Flask", "OpenCV", "PyMuPDF", "CNN", "Deep Learning"],
     githubUrl: "https://github.com/aashya-madhan/VerifAura",
     liveUrl: "https://verifaura-ai.onrender.com",
@@ -137,7 +137,7 @@ export const projects: Project[] = [
       {
         icon: "Zap",
         label: "Automated Detection",
-        detail: "Real-time forgery detection system",
+        detail: "Upload a document, get a prediction",
       },
     ],
     screenshots: [
@@ -146,14 +146,14 @@ export const projects: Project[] = [
       "/projects/verifaura-3.jpg",
     ],
     modalContent: {
-      introduction: "An AI-based document forgery detection system that leverages computer vision and deep learning to identify potential document manipulations.",
-      problemStatement: "Document forgery poses significant security risks in various sectors. Manual verification is time-consuming and prone to human error.",
-      contribution: "Built the complete Flask-based web application, integrated OpenCV for document preprocessing, trained and deployed a CNN model for forgery detection, and implemented multi-format document support using PyMuPDF.",
+      introduction: "An AI-based system that uses computer vision and deep learning to detect manipulated documents automatically.",
+      problemStatement: "Forged documents are a serious security risk, and checking them by hand is slow and prone to human error.",
+      contribution: "Built the Flask web application end to end: OpenCV for document preprocessing, a trained CNN model for forgery prediction, and PyMuPDF for multi-format document support.",
       features: [
         "Computer vision-based document analysis using OpenCV",
         "Trained CNN model for deep learning-based forgery prediction",
         "Multi-format document support (PDF, images) via PyMuPDF",
-        "Real-time automated detection system",
+        "Automated detection from a single upload",
         "Flask web application for easy document upload and analysis",
         "Confidence scoring for forgery predictions",
       ],

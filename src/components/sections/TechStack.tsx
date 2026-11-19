@@ -13,7 +13,7 @@ export function TechStack() {
       <div className="mx-auto max-w-4xl">
         <SectionHeading
           title="Skills & Expertise"
-          subtitle="Technologies I work with to build amazing projects"
+          subtitle="The tools I use to take a product from database to deployment."
         />
         <div className="space-y-10">
           {skillCategories.map((category) => (
